@@ -118,8 +118,8 @@ import useHash from './useHash';
 export default {
   createMemo,
  createReducerContext,
-//  createReducer,
-//  useLongPress,
+ createReducer,
+ useLongPress,
  createStateContext,
  useAsync,
  useAsyncFn,
@@ -232,5 +232,3 @@ useFirstMountState,
 createGlobalState,
 useHash,
 }
-
-
