@@ -1,5 +1,5 @@
 import { Dispatch, useCallback, useMemo, useRef, useState } from 'react';
-import { useFirstMountState } from './useFirstMountState';
+import useFirstMountState from './useFirstMountState';
 import { InitialHookState, ResolvableHookState, resolveHookState } from './util/resolveHookState';
 
 interface HistoryState<S> {
@@ -20,7 +20,7 @@ export function useStateWithHistory<S, I extends S>(
 ): UseStateHistoryReturn<S>;
 export function useStateWithHistory<S = undefined>(): UseStateHistoryReturn<S | undefined>;
 
-export function useStateWithHistory<S, I extends S>(
+export default function useStateWithHistory<S, I extends S>(
   initialState?: InitialHookState<S>,
   capacity: number = 10,
   initialHistory?: I[]

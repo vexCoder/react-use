@@ -3,7 +3,7 @@ import useUpdateEffect from './useUpdateEffect';
 
 type Dispatch<Action> = (action: Action) => void;
 
-interface Store<Action, State> {
+export interface Store<Action, State> {
   getState: () => State;
   dispatch: Dispatch<Action>;
 }

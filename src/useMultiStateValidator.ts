@@ -4,7 +4,7 @@ import { StateValidator, UseStateValidatorReturn, ValidityState } from './useSta
 export type MultiStateValidatorStates = any[] | { [p: string]: any } | { [p: number]: any };
 export type MultiStateValidator<V extends ValidityState, S extends MultiStateValidatorStates> = StateValidator<V, S>;
 
-export function useMultiStateValidator<V extends ValidityState, S extends MultiStateValidatorStates>(
+export default function useMultiStateValidator<V extends ValidityState, S extends MultiStateValidatorStates>(
   states: S,
   validator: MultiStateValidator<V, S>,
   initialValidity: V = [undefined] as V

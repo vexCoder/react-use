@@ -4,7 +4,7 @@ import useLifecycles from './useLifecycles';
 /**
  * read and write url hash, response to url hash change
  */
-export const useHash = () => {
+const useHash = () => {
   const [hash, setHash] = useState(() => window.location.hash);
 
   const onHashChange = useCallback(() => {
@@ -31,3 +31,5 @@ export const useHash = () => {
 
   return [hash, _setHash] as const;
 };
+
+export default useHash

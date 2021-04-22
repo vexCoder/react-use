@@ -13,7 +13,7 @@ export function useMediatedState<S = undefined>(
 ): UseMediatedStateReturn<S | undefined>;
 export function useMediatedState<S = any>(mediator: StateMediator<S>, initialState: S): UseMediatedStateReturn<S>;
 
-export function useMediatedState<S = any>(mediator: StateMediator<S>, initialState?: S): UseMediatedStateReturn<S> {
+export default function useMediatedState<S = any>(mediator: StateMediator<S>, initialState?: S): UseMediatedStateReturn<S> {
   const mediatorFn = useRef(mediator);
 
   const [state, setMediatedState] = useState<S>(initialState!);

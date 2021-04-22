@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react';
 
-interface Options {
+export interface Options {
   isPreventDefault?: boolean;
   delay?: number;
 }
